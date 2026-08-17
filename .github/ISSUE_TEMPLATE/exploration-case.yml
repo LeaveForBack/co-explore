@@ -1,0 +1,47 @@
+name: Exploration case
+about: Share a trajectory, comparison or failure case
+title: "[case] "
+labels: ["trajectory"]
+body:
+  - type: markdown
+    attributes:
+      value: "Remove private data, credentials and identifying information before submission."
+  - type: input
+    id: seed
+    attributes:
+      label: Seed
+      description: What concrete material started the run?
+    validations:
+      required: true
+  - type: input
+    id: budget
+    attributes:
+      label: Budget and checkpoint cadence
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options: [guided, relay, timed, comparison]
+    validations:
+      required: true
+  - type: textarea
+    id: route
+    attributes:
+      label: Route summary
+      description: Preserve the important causal bridges and abandoned branches.
+    validations:
+      required: true
+  - type: textarea
+    id: interventions
+    attributes:
+      label: Human interventions and their effects
+  - type: textarea
+    id: failures
+    attributes:
+      label: Repetition, convergence or other failure modes
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Sanitized artifacts or trajectory link

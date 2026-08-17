@@ -1,0 +1,103 @@
+{
+  "session_id": "sample-diagnosis-without-repair",
+  "language": "en",
+  "mode": "guided",
+  "seed": {
+    "description": "A synthetic neighborhood repair-cafe event page",
+    "url": null,
+    "selection_method": "Chosen as a neutral illustrative seed; all sources in this sample are fictional composites"
+  },
+  "started_at": "2026-08-17T04:00:00Z",
+  "ended_at": "2026-08-17T04:20:00Z",
+  "budget": {
+    "type": "steps",
+    "value": 3
+  },
+  "participants": [
+    "human",
+    "ai"
+  ],
+  "non_goals": [
+    "Do not produce an article topic",
+    "Do not treat synthetic material as factual evidence"
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "timestamp": "2026-08-17T04:01:00Z",
+      "actor": "ai",
+      "source_type": "event page",
+      "source_title": "Synthetic Repair Cafe Event",
+      "source_url": "https://example.invalid/repair-event",
+      "observation": "The page links to a repair log that distinguishes fixed, not fixed and diagnosed outcomes.",
+      "unfamiliar_detail": "Diagnosed is treated as a successful outcome category.",
+      "label": "observation",
+      "uncertainty": "Synthetic example only.",
+      "next_hop_reason": "Follow the linked log to understand why diagnosis is recorded separately.",
+      "tags": [
+        "repair",
+        "outcomes"
+      ]
+    },
+    {
+      "id": 2,
+      "timestamp": "2026-08-17T04:06:00Z",
+      "actor": "ai",
+      "source_type": "repair log",
+      "source_title": "Synthetic Volunteer Repair Log",
+      "source_url": "https://example.invalid/repair-log",
+      "observation": "The log links to an intake form with a cause-identification-only option.",
+      "unfamiliar_detail": "A non-repair service is part of the same workflow.",
+      "label": "observation",
+      "uncertainty": "Synthetic example only.",
+      "next_hop_reason": "Inspect the intake form rather than searching for another repair method.",
+      "tags": [
+        "diagnosis",
+        "service-design"
+      ]
+    },
+    {
+      "id": 3,
+      "timestamp": "2026-08-17T04:12:00Z",
+      "actor": "human",
+      "source_type": "training note",
+      "source_title": "Synthetic Volunteer Training Note",
+      "source_url": "https://example.invalid/training-note",
+      "observation": "Volunteers are told to explain the cause and future options even when no repair is possible.",
+      "unfamiliar_detail": "Explanation itself appears to be treated as delivered value.",
+      "label": "inference",
+      "uncertainty": "The inference would require real first-hand evidence in a live run.",
+      "next_hop_reason": "Human intervention: avoid a familiar policy frame and seek owner accounts about diagnosis without repair.",
+      "tags": [
+        "human-intervention",
+        "uncertainty-reduction"
+      ]
+    }
+  ],
+  "checkpoints": [
+    {
+      "after_step": 3,
+      "route_summary": "Event page to outcome log to intake category to volunteer practice.",
+      "unfamiliar_observations": [
+        "Diagnosis is represented as an outcome",
+        "Cause identification can be requested without repair"
+      ],
+      "warnings": [
+        "All current material comes from one synthetic organization"
+      ],
+      "open_routes": [
+        "Owner accounts",
+        "Outcome taxonomies from unrelated repair groups",
+        "Service design literature on uncertainty reduction"
+      ],
+      "human_intervention": "Do not turn this into a right-to-repair argument; follow why explanation itself counts."
+    }
+  ],
+  "retrospective": {
+    "question_emergence": "Why can diagnosis be valuable even when the object remains broken?",
+    "joint_discovery_gain": "The AI surfaced the category; the human prevented a familiar policy frame from taking over.",
+    "verification_needed": [
+      "All substantive claims require real sources because this trajectory is synthetic."
+    ]
+  }
+}
