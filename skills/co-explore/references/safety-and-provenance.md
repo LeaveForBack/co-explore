@@ -1,25 +1,9 @@
-# Safety and provenance
+# Provenance, uncertainty, and limits
 
-## Discovery is not verification
+Open exploration may preserve partially verified clues, but speculation must never be presented as fact.
 
-Exploration can surface rumors, archived claims, personal accounts, adversarial material or outdated pages. Preserve them as leads, not established facts.
-
-Before publication or action:
-
-- verify load-bearing claims with appropriate primary or authoritative sources;
-- note dates and version context;
-- separate quoted material from paraphrase;
-- distinguish observation, inference and speculation;
-- disclose unresolved contradictions.
-
-## Sensitive material
-
-Do not expose credentials, private URLs, personal accounts, precise location data or confidential documents in a public trail. Minimize copied personal information and respect access controls.
-
-## High-stakes domains
-
-In medical, legal, financial, safety-critical or security contexts, use CoExplore only to discover possible lines of inquiry. Do not treat the trail or retrospective as professional advice or a decision procedure.
-
-## Harmful routes
-
-A causally available route is not automatically appropriate to pursue. Respect applicable safety rules, laws, platform terms and the user's authorization. Record that a branch was declined without reproducing unnecessary harmful details.
+- Preserve title, URL, date, and source type where possible.
+- Separate observation, inference, and speculation.
+- Independently verify important claims before publication or action.
+- Medical, legal, financial, security, and other high-stakes decisions require appropriate professional validation.
+- Do not store credentials, private browsing history, precise identity data, or sensitive material the user has not authorized for public release.

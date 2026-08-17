@@ -1,0 +1,25 @@
+name: Share an exploration trail
+about: Contribute an anonymized CoExplore run or failure case
+body:
+  - type: textarea
+    attributes:
+      label: Seed and budget
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Include meaningful hops, human interventions, and where the route changed.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What was unexpected or broken?
+    validations:
+      required: true
+  - type: checkboxes
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed credentials, private browsing history, and sensitive personal information.
+          required: true

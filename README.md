@@ -1,130 +1,225 @@
-# CoExplore
+# CoExplore｜共探
 
-[简体中文](README.zh-CN.md)
+[English](README.en.md)
 
-**Human–AI co-exploration beyond familiar information paths.**
+## 和 AI 一起打破信息茧房，而不是让 AI 成为新的信息茧房。
 
-Most AI research tools begin with a question and optimize for relevance. CoExplore begins with a concrete seed, keeps the route open, and lets human and AI interrupt each other's habits until they reach materials and questions neither would likely find alone.
+搜索回答你**已经会问的问题**。  
+推荐算法继续给你看**已经喜欢的东西**。  
+Deep Research 深挖**已经确定的问题**。
 
-> Search answers what you already know how to ask. CoExplore helps you discover what you never thought to ask.
+**CoExplore 做另一件事：让人和 AI 一起离开熟悉的信息路径，发现原本不会搜索、甚至不知道该怎么问的东西。**
 
-## Who it is for
+> 不是给你推荐“相反观点”，而是一起遇见原本不知道存在的问题、社区、人物和世界。
 
-| You are… | Use CoExplore to… |
+---
+
+## 不会编程？一句话安装
+
+把下面这句话**完整复制给 Codex**：
+
+```text
+帮我安装这个仓库里的中文 CoExplore Skill，并安装成我的个人 Codex Skill：
+https://github.com/LeaveForBack/co-explore
+
+中文 Skill 在 skills/co-explore-zh。
+安装完成后，请确认 $co-explore-zh 可以使用；如果需要重启 Codex，也告诉我。
+```
+
+就这些。**不用 Git，不用终端，不用手动复制文件。**
+
+如果 Codex 没有自动开始安装，再说：
+
+```text
+请使用 $skill-installer，从这个仓库安装 skills/co-explore-zh：
+https://github.com/LeaveForBack/co-explore
+```
+
+---
+
+## 安装完怎么用？
+
+### 1. 开始
+
+有一个网页想从这里出发：
+
+```text
+$co-explore-zh
+从这里开始，和我一起开放探索：
+<粘贴网页链接>
+
+目标是走出我们各自熟悉的信息路径。不要预设最后要找到什么，也不要急着总结。
+```
+
+什么起点都没有：
+
+```text
+$co-explore-zh
+我没有明确目标。带我从一个具体而陌生的入口开始探索，和我一起打破信息茧房。
+不要预设最终主题或结论。
+```
+
+### 2. 过程中直接说人话
+
+```text
+继续这个细节
+这个太熟悉了，换远一点
+你又在解释了，继续找新东西
+为什么会有这种事？
+这条没意思，换路
+别总结，继续走
+```
+
+### 3. 结束并拿到探索结果
+
+想停时直接说：
+
+```text
+结束这轮探索，给我最终探索结果。
+
+请包括：
+1. 我们实际走过的主要路径；
+2. 出发时根本不会想到去搜的发现；
+3. 探索中新出现或发生变化的问题；
+4. 哪些原来的理解被具体材料改变了；
+5. 最值得以后继续的支线；
+6. 关键来源链接。
+
+不要为了完整而强行制造结论。
+```
+
+### 你最终会得到什么？
+
+不是一篇自动生成的文章，而是一份**探索结果**：
+
+- **路径**：我们从哪里出发，为什么一步步走到这里；
+- **意外发现**：原本不会主动搜索的人、事、社区、规则或材料；
+- **新问题**：探索以后才知道值得问的问题；
+- **认知变化**：哪些原有解释被材料推翻、修正或变得不够用了；
+- **未完成支线**：下一次最值得从哪里继续；
+- **来源**：关键页面和材料，方便回看与核验。
+
+如果最后想把这些东西变成**选题、文章、研究计划、产品机会**，探索结束后再单独让 Codex 基于结果整理即可。
+
+**第一次建议显式写 `$co-explore-zh`。** 以后只要 Codex 能识别你的意图，也可以让它自动调用。
+
+---
+
+## 适合谁？
+
+| 你是… | 可以用它… |
 |---|---|
-| Creator or independent researcher | Find unfamiliar materials and original questions |
-| Founder, product or strategy practitioner | Explore non-obvious needs, users and opportunities |
-| Cross-disciplinary researcher or learner | Leave familiar terminology, sources and citation paths |
-| Agent builder | Study and evaluate open-ended human–AI exploration |
-| Curious internet user | Recover purposeful serendipity without pure randomness |
+| 内容创作者 / 独立研究者 | 跳出重复选题，找到陌生材料和新问题 |
+| 创业者 / 产品 / 战略人员 | 离开行业共识，发现非显而易见的需求 |
+| 跨学科研究者 / 学习者 | 跳出熟悉术语、信源和引用网络 |
+| Agent 开发者 | 研究开放探索、好奇心与过早收敛 |
+| 单纯好奇的人 | 找回“没想到会走到这里”的互联网偶遇感 |
 
-**Not for:** direct factual lookup, exhaustive literature review, urgent troubleshooting, or high-stakes decisions. Use a search or deep-research workflow for those tasks.
+**不适合：**明确事实查询、穷尽式文献综述、紧急排障和高风险决策。这些任务交给搜索或 Deep Research 更合适。
 
-## Core idea
+---
 
-**Local causality, global non-predetermination.**
+## 为什么需要 CoExplore？
 
-Every hop must follow a concrete detail from the current material, but the final destination must not be chosen in advance.
+因为信息茧房不只属于人。
 
-Human and AI have different jobs:
+**人的茧房：**熟悉的兴趣、关键词、平台、圈子和问题。  
+**AI 的茧房：**高概率语义、熟悉信源、常见解释，以及过早总结。
 
-- **AI** expands reach: browsing, translation, cross-domain movement, memory and trail recording.
-- **Human** detects anomalies: “this is unfamiliar,” “you are repeating yourself,” “follow that detail,” or “drop this explanation.”
+如果只让 AI 自己“随机探索”，它很容易换几个页面后又回到自己最熟悉的路径。CoExplore 的核心不是让 AI 替人漫游，而是让**人和 AI 互相纠偏**：
 
-## How it works
+- AI 负责快速跨语言、跨社区、跨领域移动并保留路径；
+- 人负责感知“这个真的陌生”“这又开始重复了”“为什么会有这种事”；
+- 双方都可以随时打断对方的惯性。
 
-1. **Set a budget, not a conclusion.** Choose time, steps and checkpoint cadence.
-2. **Start from a concrete seed.** A page, object, phrase, community, image or event is enough.
-3. **Follow material, not a preset topic.** Each next hop must be justified by something actually observed.
-4. **Delay synthesis.** Record first; explain later. Do not force a topic during the trail.
-5. **Review together.** At checkpoints, inspect repetition and choose where to continue.
-6. **Reflect only at the end.** Map the route, question changes, discarded explanations and cognitive shifts.
+### 第一原则
 
-## Quick start
+> **局部有因，整体无预设。**
 
-This repository contains two installable Agent Skills. Install **one** language version.
+每一次下一跳都来自眼前材料里的具体线索，所以不是纯随机；但终点、主题和结论不提前设定，所以也不是另一种搜索任务。
 
-### English
+---
 
-```bash
-mkdir -p ~/.claude/skills
-cp -R skills/co-explore ~/.claude/skills/
-```
-
-Invoke it explicitly:
+## 它和普通工具有什么不同？
 
 ```text
-/co-explore Start from this page. Explore for 12 meaningful hops, check in every 4 hops, and do not form a topic early.
+搜索：          我知道要找什么 → 找答案
+Deep Research： 我知道要问什么 → 深挖答案
+推荐算法：      我过去喜欢什么 → 继续推荐
+CoExplore：      我不知道会发现什么 → 人和 AI 一起探索
 ```
 
-### Chinese
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R skills/co-explore-zh ~/.claude/skills/
-```
-
-Invoke it explicitly:
+一次好的探索可能是：
 
 ```text
-/co-explore-zh 从这个页面出发，探索 12 次有效跳转，每 4 次做一次检查，不要过早形成主题。
+一个具体网页
+   ↓ 因为出现了一个陌生细节
+一个从没去过的社区
+   ↓ 因为某种习惯无法解释
+一套奇怪的交易规则
+   ↓ 因为有人提到它的历史来源
+一个二十年前的旧网站
+   ↓
+一个出发时根本不知道该问的问题
 ```
 
-For a project-only installation, copy the selected folder into `.claude/skills/` inside the project.
+**每一步都解释得通，但终点无法从起点预测。**
 
-The packages use the portable `SKILL.md` structure and avoid vendor-specific runtime features. An agent works best when it can browse the web, but it can also explore a supplied folder or document collection.
+---
 
-## Outputs
+## 这些规则从哪来？
 
-A session should leave four artifacts:
+不是凭空写出来的 Prompt。它们来自多轮真实的人机开放探索，以及其中反复出现的失败：
 
-- **Trail:** what was visited and why each hop happened.
-- **Unfamiliar materials:** concrete details worth preserving before interpretation.
-- **Question evolution:** how the initial framing changed or disappeared.
-- **Retrospective:** what neither side would likely have sought alone, plus unresolved routes.
+- 说是“随机探索”，不同 Agent 却反复回到熟悉入口；
+- 刚看到一点线索就形成主题，后面开始替主题搜证据；
+- 中途总结得太漂亮，反过来把后面的路线锁死；
+- 没有发现新材料，却用越来越深的解释制造“还在探索”的错觉；
+- 嘴上没有目标，实际上偷偷把“最后必须找到一个好题”当成目标；
+- 人的一句“太熟悉了”“没意思”“你又在解释”，往往比模型自己的规划更能真正改变路线。
 
-## Repository layout
+完整记录见 [`field-notes/README.zh-CN.md`](field-notes/README.zh-CN.md)。这些只是实践经验，不声称适用于所有模型和所有场景。
+
+---
+
+## 仓库里有什么？
 
 ```text
-skills/       English and Chinese Agent Skills
-examples/     Short, synthetic example sessions
-benchmark/    Comparison protocol, trajectory schema and sample data
-scripts/      Dependency-free session and validation utilities
-tests/        Basic utility tests
+skills/       中英文可安装 Skill
+field-notes/  多轮真实探索中总结出的经验与失败模式
+examples/     最小使用示例
 ```
 
-## Optional session utilities
+就这三件核心东西。CoExplore 目前首先是一套**可直接使用的人机共同开放探索方法**，不把它包装成复杂的研究框架。
 
-Create a session workspace:
+---
 
-```bash
-python3 scripts/new_session.py \
-  --lang en \
-  --seed "A neighborhood repair-café event page" \
-  --mode guided \
-  --budget-type steps \
-  --budget-value 12
-```
+## 核心原则
 
-Validate a trajectory:
+1. **设预算，不设结论。** 可以规定时间或跳转次数，不规定必须找到什么。
+2. **从具体材料出发。** 页面、帖子、图片、物件、词语、社区都可以。
+3. **下一跳来自当前材料。** 不靠纯随机，也不靠预设关键词树。
+4. **延迟总结。** 探索阶段先看、先走、先记录，不急着形成“题”。
+5. **人和 AI 互相纠偏。** 谁发现对方开始重复，谁就打断路线。
+6. **结束以后再回看。** 最后才整理真正发生了什么变化。
 
-```bash
-python3 scripts/validate_trajectory.py benchmark/sample-trajectory.json --strict
-```
+---
 
-## Evaluation
+## 贡献
 
-Do not optimize scores during exploration. Evaluate only after the trail ends.
+我们最欢迎的不是“更漂亮的 Prompt”，而是：
 
-Suggested dimensions include information-environment breadth, path coherence, semantic displacement, question emergence, explanation revision, joint discovery gain, provenance coverage and cross-run repetition. See [`benchmark/README.md`](benchmark/README.md).
+- 真实探索经历；
+- 失败案例；
+- 不同模型反复出现的惯性；
+- 多语言适配；
+- 能让人和 AI 真正走得更远的方法改进。
 
-## Important limits
+见 [`CONTRIBUTING.zh-CN.md`](CONTRIBUTING.zh-CN.md)。
 
-CoExplore is a discovery protocol, not a truth engine. Preserve provenance, distinguish observation from inference, and verify important claims before publication or action. Never commit private browsing histories, credentials or sensitive personal information.
+## 边界
 
-## Contributing
-
-New failure cases, multilingual adaptations, trajectories and benchmark proposals are welcome. See [`CONTRIBUTING.md`](CONTRIBUTING.md).
+CoExplore 是**发现工具**，不是“真相机器”。重要事实在发布、投资、医疗、法律或其他高风险行动前应独立核验。不要把账号凭证、私人浏览记录或敏感个人信息提交到公共仓库。
 
 ## License
 

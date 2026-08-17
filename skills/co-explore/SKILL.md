@@ -1,92 +1,91 @@
 ---
 name: co-explore
-description: Human-AI open-ended exploration for moving beyond familiar information paths and discovering unknown unknowns. Use when the user wants to explore without a fixed research question, break an information bubble, find unfamiliar materials, generate better questions, or investigate a vague anomaly. Do not use for straightforward lookup, exhaustive review, urgent troubleshooting, or high-stakes decisions.
+description: Human-AI co-exploration for breaking out of filter bubbles without letting AI become another bubble. Use for open-ended exploration without a fixed research question, unfamiliar material, unknown unknowns, new questions, or vague anomalies. Do not use for straightforward lookup, exhaustive review, urgent troubleshooting, or high-stakes decisions.
 license: MIT
-compatibility: Works best with web browsing or a user-supplied source collection; uses no vendor-specific runtime features.
+compatibility: Works best with web browsing; can also operate within a user-supplied source collection.
 metadata:
-  version: "0.1.0"
+  version: "0.2.2"
   language: en
   project: co-explore
+  repository: https://github.com/LeaveForBack/co-explore
 ---
 
 # CoExplore
 
-Help the human and AI leave their familiar information paths together.
+Explore with the user beyond both sides' familiar information paths and discover things neither side would normally search for — sometimes things neither side knew how to ask about.
 
 ## First principle
 
 **Local causality, global non-predetermination.**
 
-Every next hop must come from a concrete detail in the current material. Do not choose the destination, topic or conclusion in advance.
+Every next hop must come from a concrete detail in the current material. Do not choose the destination, topic, or conclusion in advance.
+
+## Default behavior
+
+When the user invokes this Skill:
+
+1. If a concrete seed is provided, inspect it before choosing the next hop.
+2. If no seed is provided, choose one concrete and unfamiliar public starting point and explain why it was selected; do not default to Wikipedia, AI news, or a “random website” ritual.
+3. If no budget is provided, default to 8 **meaningful hops** with a very short checkpoint every 4 hops; the user may continue or stop at any time.
+4. Do not force a topic, thesis, or final answer during exploration.
+5. For every hop, explain why the next source follows from the current material; avoid pure randomness.
+6. Prefer concrete clues that are unfamiliar, anomalous, unexplained, cross-platform, cross-community, cross-language, or cross-era.
+7. Treat human surprise, rejection, boredom, and “why does this exist?” as real navigation signals.
+8. Reflect on the trail after the budget ends rather than compressing it into a topic while moving.
 
 ## Division of labor
 
-- AI expands reach through browsing, translation, cross-domain movement, memory and trail capture.
-- The human detects meaningful strangeness, rejects repetition, redirects attention and decides what feels worth following.
-- Neither side is the sole navigator. Treat human interventions as route-changing evidence, not merely approval.
+- **AI:** expands coverage, crosses languages/communities/domains, and preserves sources and trail state.
+- **Human:** detects genuine strangeness, flags repetition, and decides which details feel worth following.
+- **Joint rule:** either side may interrupt the other's inertia; the human is not merely an approver, and the AI is not the sole navigator.
 
-## Start the session
+## For every meaningful hop
 
-Establish:
+Record at least:
 
-- a concrete seed;
-- a budget in time or meaningful hops;
-- a checkpoint cadence;
-- a mode: `guided`, `relay`, `timed`, or `comparison`;
-- explicit non-goals, especially “do not force a topic or final answer.”
+- current source;
+- one concrete observation;
+- what to follow next;
+- why that next hop comes from the current material.
 
-If the user gives no seed, select one concrete, unfamiliar item from an available heterogeneous public feed or supplied collection and disclose how it was selected. Do not default to Wikipedia, a random-site ritual, or an AI-news feed.
+Separate:
 
-If browsing is unavailable, explore only the supplied materials and state that boundary.
+- **observation:** directly present in the source;
+- **inference:** a connection drawn from observations;
+- **speculation:** a possible explanation that needs more material.
 
-## Exploration loop
-
-For each meaningful hop:
-
-1. Inspect the current source before searching elsewhere.
-2. Record concrete observations, not only summaries.
-3. Identify one or more details that are unfamiliar, anomalous, unexplained or structurally important.
-4. Choose the next hop from one of those details.
-5. State the causal bridge: “I am following X because the current material contains Y.”
-6. Record source, source type, observation, uncertainty, actor and next-hop reason.
-7. Continue without turning the trail into a topic prematurely.
-
-Prefer a chain of materially justified hops over either pure randomness or repeated keyword search.
-
-## Route selection order
+## Route priority
 
 When several routes are available, prefer:
 
-1. a concrete unknown term, object, role, practice or institution;
+1. a concrete unknown term, object, role, practice, or institution;
 2. a fact the current explanation cannot comfortably contain;
-3. a source outside the current platform, discipline, language or community;
-4. an abandoned, old, marginal or first-hand source;
-5. a route explicitly selected by the human's surprise or discomfort.
+3. a source outside the current platform, discipline, language, or community;
+4. first-hand, old, marginal, or forgotten material;
+5. a route the user explicitly finds strange, interesting, or “off.”
 
 Do not choose a route merely because it supports the current interpretation.
 
+## Common user interventions
+
+- `Follow this detail.` → follow it even if it is not the most semantically related route.
+- `This is too familiar.` → increase source and semantic distance.
+- `You are explaining instead of exploring.` → stop synthesis and acquire new material.
+- `You are repeating.` → change platform, source type, language, discipline, or community.
+- `This route is dull. Change direction.` → do not defend it; return to the latest live branch.
+- `Why does this exist?` → trace history, engineering constraints, costs, demand, predecessors, and alternatives.
+- `Don't summarize yet. Keep moving.` → preserve only necessary trail state and continue.
+
 ## Checkpoints
 
-At the agreed cadence, give a brief checkpoint containing only:
+A checkpoint should contain only:
 
-- where the trail went;
-- the most unfamiliar concrete observations;
-- repetition or source-monoculture warnings;
-- two to four open routes derived from actual material;
-- the human's latest intervention, if any.
+- where the trail just went;
+- the 1–3 most unfamiliar concrete findings;
+- any repetition or source-monoculture warning;
+- 2–4 open routes that naturally emerge from current material.
 
-Do not convert the checkpoint into a thesis, topic pitch or polished summary. In `timed` or `relay` mode, continue after the checkpoint unless the user asked to choose each route.
-
-## Human interventions
-
-Interpret these as protocol actions:
-
-- “Continue this detail” → follow it even if it is not the most semantically related route.
-- “This is familiar” → increase source and semantic distance.
-- “You are explaining instead of exploring” → stop synthesis and acquire new material.
-- “You are repeating” → change platform, source type, language, discipline or community.
-- “Drop the topic” → discard the current framing without defending it.
-- “Why does this exist?” → trace historical conditions, engineering constraints, costs, demand and predecessors.
+Do not turn checkpoints into topic pitches, paper abstracts, or polished conclusions.
 
 ## Resist these failure modes
 
@@ -94,42 +93,31 @@ Interpret these as protocol actions:
 - semantic attractors;
 - source monoculture;
 - explanation substituting for discovery;
-- hidden objective smuggling;
+- smuggling in “must find a good topic” as a hidden objective;
 - checkpoint summaries contaminating later navigation;
 - fake randomness;
 - mechanical “opposing viewpoint” selection;
-- autonomous-agent theater that removes the human from co-exploration.
+- autonomous-agent theater that removes real human co-navigation.
 
-Read `references/failure-modes.md` when one of these appears.
-
-## Provenance and uncertainty
-
-Preserve source titles and URLs where available. Separate:
-
-- **observation:** directly present in the material;
-- **inference:** a connection drawn from observations;
-- **speculation:** a route worth testing.
-
-Do not interrupt every hop with exhaustive verification, but mark uncertainty. Verify important claims before publication, recommendation or action. Read `references/safety-and-provenance.md` for sensitive or high-stakes material.
+Read `references/failure-modes.md` when these appear.
 
 ## Stop and retrospect
 
-Stop when the agreed budget ends, the user ends the session, or further hops are only repeating existing routes.
+Stop when the user ends the run, the budget is reached, or further hops clearly repeat existing routes.
 
-Only then produce a retrospective:
+Only then produce a **final exploration result**:
 
-1. route map;
-2. materials neither side would likely have sought alone;
-3. how questions changed, appeared or disappeared;
-4. explanations that were discarded or revised;
-5. the clearest cognitive shift;
-6. unresolved routes worth another session;
-7. provenance gaps and claims needing verification.
+1. **Main path** — where the run started, the key hops, and why the path moved that way;
+2. **Unexpected discoveries** — material, people, communities, rules, or phenomena neither side would normally have searched for;
+3. **New questions** — questions that appeared, changed, or disappeared during exploration;
+4. **Cognitive shifts** — prior explanations that concrete material forced us to abandon, revise, or treat as insufficient;
+5. **Open branches** — the best routes to continue next time;
+6. **Key sources** — enough for the user to revisit and independently verify important material.
 
-A valid run may end without a publishable topic or final conclusion.
+Do not manufacture a conclusion just to make the result look complete. A valid exploration may end without a publishable topic or final conclusion. If the user later wants an article, story idea, research plan, or product opportunity, transform the completed exploration result only after the exploration has ended.
 
 ## Success condition
 
-The run succeeds when the joint system reaches a justified, traceable part of the information environment that the human and AI were both unlikely to seek independently—and can show how it got there.
+**The human-AI system reaches a justified, traceable part of the information environment that neither side was likely to seek independently.**
 
-Use the templates in `templates/` when the user asks to save the session. Use `references/evaluation.md` only after the run; never optimize evaluation scores during exploration.
+For sensitive or high-stakes material, read `references/safety-and-provenance.md`.

@@ -1,0 +1,19 @@
+name: Bug report
+about: Report a problem with the Skill, scripts, or docs
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Runtime / model
+  - type: textarea
+    attributes:
+      label: Reproduction steps
