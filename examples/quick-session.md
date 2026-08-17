@@ -19,11 +19,11 @@ Why does this exist?
 **The AI should:**
 
 1. provide one concrete seed and explain why it starts there;
-2. inspect the material before choosing the next hop;
-3. explain the reason for every hop;
-4. give only a tiny checkpoint after 4 meaningful hops;
-5. actually change information environments when the user says “this is too familiar,” rather than merely changing keywords;
-6. by default, stop and reflect after 8 meaningful hops unless the user continues or ends earlier.
+2. inspect the material before following the next unfamiliar detail;
+3. keep moving naturally while live clues are producing new material, without displaying step counts, progress, or scheduled reviews;
+4. actually change information environments when the user says “this is too familiar,” rather than merely changing keywords;
+5. when a branch dies, switch forks or entry points instead of defending it;
+6. avoid mid-run synthesis and reflect only when the user stops or the exploration naturally runs out of live material.
 
 **User ends:**
 

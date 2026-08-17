@@ -3,7 +3,7 @@ about: Contribute an anonymized CoExplore run or failure case
 body:
   - type: textarea
     attributes:
-      label: Seed and budget
+      label: Starting point and context
     validations:
       required: true
   - type: textarea

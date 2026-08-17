@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.2.5
+
+- Removed fixed step counts, scheduled checkpoints, progress-style pacing, and automatic stop points from the Skill.
+- Rewrote the runtime behavior to match the original wandering process: follow live material continuously, reroute immediately when a branch becomes stale or the user rejects it, and let user intent plus exploration state determine when to stop.
+- Removed form-like per-hop behavior and replaced it with lightweight, natural narration.
+- Added the real comparison that exposed the problem to Field Notes: a protocolized Skill behaved like a task runner, while an unstructured wandering run simply dropped an unwanted legal/institutional route and continued through new concrete material.
+- Kept the root-cause pursuit rules from 0.2.4: “why did this happen?”, “why this person?”, “why does this exist?”, and related evidence-seeking prompts.
+
+## 0.2.4
+
+- Promoted root-cause pursuit into the main Skill behavior instead of leaving it only in field notes.
+- Added explicit probes for “why did this happen?”, “why this person?”, “why does this exist?”, “why this particular form?”, predecessors/alternatives, and why things persisted, changed, disappeared, or were replaced.
+- Added a guardrail: use “why” questions to navigate toward concrete evidence, not to generate plausible explanations in place.
+- Updated both Chinese and English Skills and field notes.
+
 ## 0.2.3
 
 - Made Simplified Chinese the default GitHub repository README (`README.md`).

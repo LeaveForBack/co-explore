@@ -28,7 +28,7 @@ We tried periodic summaries. Once a summary produced an elegant theme or explana
 
 A recording device had become a new objective function.
 
-**So:** checkpoints should only record where the trail went, unfamiliar facts, repetition warnings, and open branches. Do not write a thesis mid-run.
+**So:** avoid scheduled mid-run reviews. If orientation is genuinely needed, preserve only raw facts, dead ends, and still-live forks, do not turn them into a theme, and continue immediately.
 
 ## 4. Deeper explanation can masquerade as farther exploration
 
@@ -60,19 +60,30 @@ In open exploration, strange material is allowed to remain simply strange for a 
 
 **So:** questions may emerge late. Some of the best ones only become visible after reviewing a long trail of heterogeneous material.
 
-## 7. The most productive question is often very simple
+## 7. The most productive questions are often very simple
 
-Once a concrete anomaly appears, one prompt repeatedly proved useful:
+Once a concrete anomaly appears, the useful questions are usually not grand abstractions:
 
-> **Why does this exist? Why does it exist in this particular form?**
+> **Why did this happen at all?**  
+> **Why this person?**  
+> **Why does this exist — what problem did it originally solve?**  
+> **Why did it take this particular form?**
 
-Following that question tends to uncover historical conditions, engineering constraints, cost structures, real demand, predecessors, alternatives, and reasons things later disappeared. That usually creates more genuine discovery than abstract “deepening.”
+“Why this person?” puts a protagonist back into the causal chain: what unusual experience, position, resources, relationships, skills, or contingencies did they have?
 
-## 8. Do not let the AI pretend to satisfy a time budget
+“Why does this exist?” sends the trail back into the world that produced it: who needed it, what people did before it existed, why older approaches were insufficient, and which engineering, cost, media, cultural, or organizational constraints shaped its form. It also opens the later question of why it persisted, changed, disappeared, or was replaced.
 
-We experimented with “explore for a strict two hours.” If the runtime cannot actually enforce wall-clock time, the model can turn “two hours” into narrative rather than elapsed time.
+**The crucial lesson: these questions are not invitations for the model to generate five plausible reasons on the spot. They are navigation prompts.** Seek participants, old pages, earlier versions, contemporary alternatives, first-hand accounts, and real constraints. Explanations should change only after the material changes.
 
-**So:** verifiable hop budgets — 8, 20, or another number of meaningful hops — are the safer default. Use real-time budgets only when the runtime can truly enforce them.
+That tends to create more genuine discovery than abstract “deepening.”
+
+## 8. Do not redesign wandering into a task workflow
+
+We later made a very direct mistake: in an attempt to make the Skill “more executable,” we added fixed step counts, scheduled reviews, and staged reflection. In real use, the model began surfacing progress and review mechanics. It behaved more like a task runner and less like the wandering process we were trying to preserve.
+
+The contrast was clearer in a run without that machinery. When the human simply rejected a legal/institutional route and said to keep wandering elsewhere, the AI dropped it immediately and moved into new concrete material — including tidal-island safety information, pigeon-loft counting, and lock manuals. There was no meeting before the turn, no scheduled recap, and no need to keep a dying route alive to satisfy a process.
+
+**So:** CoExplore should not invent its own pacing system. Keep moving while material continues to produce concrete clues; when a branch dries up, switch forks, sources, or entry points. Let user intent and the exploration itself determine when the run ends. If the user explicitly says “keep going until I stop you,” reroute and continue instead of self-terminating.
 
 ## 9. A run can be valid even when it produces nothing publishable
 

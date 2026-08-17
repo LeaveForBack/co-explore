@@ -196,12 +196,13 @@ Those are the three core pieces. CoExplore is currently a **practical human–AI
 
 ## Core principles
 
-1. **Set a budget, not a conclusion.** Time or hop limits are fine; required discoveries are not.
+1. **Do not pre-program the exploration cadence.** No fixed step counts, scheduled checkpoints, or staged deliverables; keep moving while material is alive and reroute when a branch dries up.
 2. **Start from concrete material.** A page, post, image, object, phrase, or community is enough.
 3. **Let the current material cause the next hop.** Avoid both pure randomness and preset keyword trees.
 4. **Delay synthesis.** Observe and move before forcing a topic.
 5. **Human and AI interrupt each other.** Either side can break repetition or premature convergence.
-6. **Reflect after exploration ends.** Only then describe what actually changed.
+6. **Ask “why,” but use it to find material.** Why did this happen, why this person, why does it exist, why this form — use these questions to open the next hop, not to invent explanations in place.
+7. **Reflect after exploration ends.** Only then describe what actually changed.
 
 ---
 
