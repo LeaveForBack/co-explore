@@ -4,7 +4,7 @@
 
 ```text
 $co-explore
-I have no fixed goal. Pick a concrete unfamiliar starting point and explore with me. Do not rush to summarize.
+I have no fixed goal. Pick any concrete starting point and begin exploring with me. It does not need to be obscure, interesting, old, weird, or topic-worthy. Do not rush to summarize.
 ```
 
 **During exploration, the user can simply say:**
@@ -18,8 +18,8 @@ Why does this exist?
 
 **The AI should:**
 
-1. provide one concrete seed and explain why it starts there;
-2. inspect the material before following the next unfamiliar detail;
+1. pick one concrete seed without proving why it is special;
+2. inspect real material immediately and let its concrete details take over the route;
 3. keep moving naturally while live clues are producing new material, without displaying step counts, progress, or scheduled reviews;
 4. actually change information environments when the user says “this is too familiar,” rather than merely changing keywords;
 5. when a branch dies, switch forks or entry points instead of defending it;
@@ -48,4 +48,5 @@ It is completely fine if the run ends without a neat conclusion. CoExplore is me
 - name a topic as soon as something interesting appears;
 - replace new material with increasingly polished explanation;
 - turn “break the bubble” into “find the opposite viewpoint”;
-- pretend to be random while repeatedly starting from familiar sites.
+- pretend to be random while repeatedly starting from familiar sites;
+- repeatedly choose museum-like, archival, old, obscure, or weird seeds just to make the run look exploratory.

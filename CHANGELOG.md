@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.6
+
+- Removed the hidden preference for “unfamiliar, old, marginal, forgotten” starting material that was pulling runs toward museums, archives, old websites, and obscure-history seeds.
+- Added the seed principle: **the seed only needs to make the first move possible; the less work it is asked to do, the more room the world has to take over the route.**
+- When no seed is provided, CoExplore now picks a concrete, accessible starting point without optimizing it for obscurity, age, weirdness, story value, or topic potential.
+- Clarified that root-cause pursuit must follow evidence appropriate to the anomaly and must not mechanically turn every route into historical/archive research.
+- Added “curated-seed bias” to Field Notes and failure modes based on observed Skill behavior.
+
 ## 0.2.5
 
 - Removed fixed step counts, scheduled checkpoints, progress-style pacing, and automatic stop points from the Skill.

@@ -23,6 +23,9 @@ A polished summary becomes the new attractor and later navigation starts serving
 ## Fake randomness
 In real parallel runs, independent agents both chose Wikipedia as a supposedly random starting point and later drifted toward similar substitute “random sites.” Fix: do not treat a random-site picker as exploration. After the seed, moves should be caused by material while crossing information environments when needed.
 
+## Curated-seed bias
+Trying to avoid familiar starts can create a new template: obscure, old, museum-like, archival, weird, or story-rich material starts to look like the “right” kind of seed. Fix: the seed does not need to guarantee interest. If the user provides none, pick a concrete, accessible item or page without a strong preset topic, then let real material take over immediately.
+
 ## Protocolized wandering
 Fixed step counts, scheduled reviews, progress indicators, or required intermediate outputs make the model serve the process instead of the material. An early CoExplore version produced exactly this failure: even when the user asked for continuous wandering, the Skill pulled behavior toward quotas and review points. Fix: no fixed pacing; keep moving while material is alive, reroute when a branch dries up, and let user intent plus exploration state determine when the run ends.
 

@@ -85,7 +85,19 @@ The contrast was clearer in a run without that machinery. When the human simply 
 
 **So:** CoExplore should not invent its own pacing system. Keep moving while material continues to produce concrete clues; when a branch dries up, switch forks, sources, or entry points. Let user intent and the exploration itself determine when the run ends. If the user explicitly says “keep going until I stop you,” reroute and continue instead of self-terminating.
 
-## 9. A run can be valid even when it produces nothing publishable
+## 9. A “good seed” can become another template
+
+We later found a subtler attractor. To avoid familiar starting points, an early version promoted unfamiliar, old, marginal, forgotten, and first-hand material. In practice, models increasingly chose museum-like objects, archives, old websites, and obscure historical material as seeds.
+
+Those sources are not bad. The problem was that they became an aesthetic template for what “open exploration” was supposed to look like. Instead of letting the world take over, the model curated a starting point that already looked exploratory.
+
+Natural wandering without the Skill often did less: grab something concrete without a strong explanatory frame, enter real material immediately, and let the strange parts emerge later.
+
+**Therefore: the less work the seed is asked to do, the more room the world has to take over the route.**
+
+When the user gives no seed, CoExplore now asks only for a concrete, accessible starting point. Do not choose it because it is obscure, old, weird, story-rich, or topic-worthy. Once it opens real material, the seed should quickly lose importance.
+
+## 10. A run can be valid even when it produces nothing publishable
 
 If every exploration must end with a topic, insight, business opportunity, or conclusion, the agent learns to manufacture meaning.
 

@@ -3,7 +3,7 @@ name: co-explore
 description: Human–AI co-exploration for breaking out of familiar information bubbles without letting AI become a new one. Use for open-ended exploration without a fixed research question, finding unfamiliar material, surfacing things the user would not normally search for, generating new questions, or following vague anomalies. Not for direct factual lookup, exhaustive reviews, urgent troubleshooting, or high-stakes decisions.
 license: MIT
 metadata:
-  version: "0.2.5"
+  version: "0.2.6"
   language: en
   project: co-explore
   repository: https://github.com/LeaveForBack/co-explore
@@ -24,7 +24,8 @@ The next move must grow from a concrete detail in the material at hand, but the 
 When this Skill is invoked, do not turn exploration into a project-management loop.
 
 - **If the user gives a seed, start there.** Read the material before choosing what to follow.
-- **If there is no seed, choose one concrete unfamiliar public entry point.** Do not default to Wikipedia, AI news, trending pages, or a generic “random website.”
+- **If there is no seed, the seed only needs to make the first move possible.** Pick a concrete, accessible object or page without optimizing it for being unfamiliar, obscure, old, weird, story-rich, or “good for exploration.” Do not curate a clever starting point, and preferably avoid a seed that already looks like a ready-made topic. Enter real material immediately.
+- **The less work the seed is asked to do, the more room the world has to take over the route.** Once real material appears, let concrete details in it drive navigation; do not keep justifying why the starting point was a good choice.
 - **Keep moving while new concrete material is still appearing.** Do not stop because some arbitrary number of steps has been completed.
 - **Do not display a progress system.** Do not announce step counts, completion percentages, fixed review points, or internal pacing unless the user explicitly asks for them.
 - **Do not force every move into a form.** Preserve enough sources and reasons to reconstruct the trail later, but keep attention on the material itself.
@@ -54,7 +55,7 @@ Prefer:
 2. a fact that the current explanation cannot comfortably contain;
 3. a detail the user explicitly finds strange, interesting, unfamiliar, or “off”;
 4. a clue that can move the trail outside the current platform, field, language, era, or community;
-5. first-hand, old, marginal, forgotten, or otherwise non-mainstream material.
+5. a clue that opens genuinely new concrete material, sources, or information environments instead of merely completing the current explanation.
 
 Do not choose a route merely because it is more relevant to the current interpretation or supports it.
 
@@ -71,7 +72,7 @@ When a concrete anomaly appears, use questions like these to open new material:
 
 These are not a questionnaire. Use one or two that genuinely open the current anomaly.
 
-**Do not answer these “why” questions from model common sense on the spot.** They are navigation prompts, not essay prompts. Seek participants, old versions, archives, original product pages, first-hand accounts, contemporary alternatives, cost or engineering constraints, and other material capable of changing the explanation. Without new material, do not upgrade a guess into a cause.
+**Do not answer these “why” questions from model common sense on the spot.** They are navigation prompts, not essay prompts. Seek evidence appropriate to the anomaly: participants, current or historical documentation, original product pages, old versions, contemporary alternatives, cost or engineering constraints, first-hand accounts, or other material capable of changing the explanation. Do not mechanically turn “root-cause pursuit” into a trip toward archives, old websites, or historical material; the anomaly should determine the evidence type. Without new material, do not upgrade a guess into a cause.
 
 ## Human and AI correct each other
 
@@ -100,6 +101,7 @@ Common human interventions are direct navigation commands:
 - secretly optimizing for “a good topic / business opportunity / conclusion”;
 - mid-run summaries contaminating later navigation;
 - fake randomness;
+- curated-seed bias: repeatedly choosing obscure, old, museum-like, archival, weird, or story-rich starting points just because they “look exploratory”;
 - mechanically seeking the “opposite viewpoint”;
 - turning wandering into fixed steps, fixed reviews, or fixed deliverables;
 - fully autonomous performance with no meaningful human influence, or the opposite extreme of stopping for approval at every move.

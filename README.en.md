@@ -55,7 +55,8 @@ Start with no topic at all:
 
 ```text
 $co-explore
-I have no fixed goal. Pick one concrete, unfamiliar starting point and explore with me so we can break out of our filter bubbles.
+I have no fixed goal. Pick any concrete starting point and begin exploring with me.
+The starting point does not need to be obscure, interesting, old, weird, or topic-worthy; it only needs to make the first move possible.
 Do not preselect a final topic or conclusion.
 ```
 
@@ -152,13 +153,13 @@ CoExplore:      I don't know what I'll discover → explore together
 A good exploration might look like:
 
 ```text
-A concrete page
-   ↓ because an unfamiliar detail appears
-A community you have never visited
-   ↓ because a strange practice needs explaining
-An unusual trading rule
-   ↓ because someone mentions where it came from
-A twenty-year-old website
+An ordinary concrete page
+   ↓ because one detail is not yet understood
+A different information environment
+   ↓ because a behavior there does not fit the current explanation
+An unexpected rule or practice
+   ↓ because the material keeps pulling the route elsewhere
+Another place you would not have chosen at the start
    ↓
 A question you did not know existed when you started
 ```
@@ -176,7 +177,9 @@ They were not invented as a polished prompt. They came from repeated human–AI 
 - polished mid-run summaries contaminated what the agent explored next;
 - explanations grew deeper while no genuinely new material was being found;
 - an unstated goal — “we must end with a good topic” — quietly returned;
-- a human saying “too familiar,” “boring,” or “you are explaining again” often changed the route more effectively than the agent's own plan.
+- a human saying “too familiar,” “boring,” or “you are explaining again” often changed the route more effectively than the agent's own plan;
+- fixed step counts and checkpoints made the model serve the process instead of the material, so they were removed;
+- promoting “unfamiliar, old, marginal, forgotten” as preferences pulled models toward museum-, archive-, and old-web-like seeds, so the seed is no longer asked to be interesting.
 
 See [`field-notes/README.md`](field-notes/README.md) for the full notes. These are practical observations, not universal claims about every model or situation.
 
@@ -197,7 +200,7 @@ Those are the three core pieces. CoExplore is currently a **practical human–AI
 ## Core principles
 
 1. **Do not pre-program the exploration cadence.** No fixed step counts, scheduled checkpoints, or staged deliverables; keep moving while material is alive and reroute when a branch dries up.
-2. **Start from concrete material.** A page, post, image, object, phrase, or community is enough.
+2. **The seed only needs to make the first move possible.** If the user gives no seed, pick a concrete object or page without curating for obscurity, age, weirdness, or story value.
 3. **Let the current material cause the next hop.** Avoid both pure randomness and preset keyword trees.
 4. **Delay synthesis.** Observe and move before forcing a topic.
 5. **Human and AI interrupt each other.** Either side can break repetition or premature convergence.
