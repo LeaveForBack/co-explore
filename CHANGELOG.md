@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.3
+
+- Promoted follow-up questions about real explanatory gaps into the core driver of exploration.
+- Added a vertical-depth criterion: new evidence must change the previous layer of understanding, not merely add more examples.
+- Added collision checks for boundary conditions, counterexamples, operating assumptions, and conflicting evidence.
+- Made “continue exploring” resume the last unresolved node instead of expanding sideways with new keywords.
+- Added guardrails so question-driven exploration does not become a visible checklist, fixed-depth routine, or SOP.
+- Replaced the previous failure-mode references with scoped preloaded calibration and contrastive navigation cases.
+
 ## 0.2.6
 
 - Removed the hidden preference for “unfamiliar, old, marginal, forgotten” starting material that was pulling runs toward museums, archives, old websites, and obscure-history seeds.
